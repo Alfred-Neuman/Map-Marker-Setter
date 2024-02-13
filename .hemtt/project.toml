@@ -1,0 +1,16 @@
+name = "Map-Marker-Setter"
+prefix = "map_marker_setter"
+mainprefix = "x"
+
+[properties]
+author = "johnb43"
+url = "https://github.com/johnb432"
+
+[files]
+include = [
+    "CHANGELOG.md",
+    "meta.cpp",
+    "mod.cpp",
+    "LICENSE",
+    "README.md"
+]
