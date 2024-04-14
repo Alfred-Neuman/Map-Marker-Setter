@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * call map_marker_setter_main_fnc_gui_createProfile;
+ * call map_marker_setter_main_fnc_gui_createProfile
  *
  * Public: No
  */
@@ -24,7 +24,7 @@ private _yOff = safezoneY + (safezoneH - (_calc / 1.2)) / 2;
 private _wOff = _calc / 40;
 private _hOff = _calc / 30; // (_calc / 1.2) / 25
 
-private _displayParent = findDisplay IDD_MISSION;
+private _displayParent = findDisplay IDD_MAIN_MAP;
 
 // Display creation
 private _display = _displayParent createDisplay "RscDisplayEmpty";
@@ -36,7 +36,7 @@ _ctrlGroup ctrlCommit 0;
 
 // Title background
 private _ctrlBackgroundTitle = _display ctrlCreate ["RscTextMulti",-1, _ctrlGroup];
-_ctrlBackgroundTitle ctrlSetText LLSTRING(createImportPreset);
+_ctrlBackgroundTitle ctrlSetText LLSTRING(createImportProfileTitle);
 _ctrlBackgroundTitle ctrlSetPosition [0, 0, POS_W(16.7), POS_H(1)];
 _ctrlBackgroundTitle ctrlSetBackgroundColor [GETPRVAR("GUI_BCG_RGB_R",0.13), GETPRVAR("GUI_BCG_RGB_G",0.54), GETPRVAR("GUI_BCG_RGB_B",0.21), GETPRVAR("GUI_BCG_RGB_A",0.8)];
 _ctrlBackgroundTitle ctrlEnable false;
@@ -58,8 +58,8 @@ _ctrlEditName ctrlCommit 0;
 private _ctrlBackgroundName = _display ctrlCreate ["RscTextMulti", -1, _ctrlGroup];
 _ctrlBackgroundName ctrlSetPosition [POS_X(4), POS_Y(1.5), POS_W(4.9), POS_H(1.2)];
 _ctrlBackgroundName ctrlSetBackgroundColor [0, 0, 0, 0.6];
-_ctrlBackgroundName ctrlSetText LLSTRING(presetName);
-_ctrlBackgroundName ctrlSetTooltip LLSTRING(presetNameDesc);
+_ctrlBackgroundName ctrlSetText LLSTRING(profileName);
+_ctrlBackgroundName ctrlSetTooltip LLSTRING(profileNameDesc);
 _ctrlBackgroundName ctrlEnable false;
 _ctrlBackgroundName ctrlCommit 0;
 
@@ -71,8 +71,8 @@ _ctrlEditSettings ctrlCommit 0;
 private _ctrlBackgroundSettings = _display ctrlCreate ["RscTextMulti", -1, _ctrlGroup];
 _ctrlBackgroundSettings ctrlSetPosition [POS_X(4), POS_Y(2.8), POS_W(4.9), POS_H(1.2)];
 _ctrlBackgroundSettings ctrlSetBackgroundColor [0, 0, 0, 0.6];
-_ctrlBackgroundSettings ctrlSetText LLSTRING(presetSettings);
-_ctrlBackgroundSettings ctrlSetTooltip LLSTRING(presetSettingsDesc);
+_ctrlBackgroundSettings ctrlSetText LLSTRING(profileSettings);
+_ctrlBackgroundSettings ctrlSetTooltip LLSTRING(profileSettingsDesc);
 _ctrlBackgroundSettings ctrlEnable false;
 _ctrlBackgroundSettings ctrlCommit 0;
 
@@ -115,5 +115,6 @@ _display displayAddEventHandler ["KeyDown", {
 
 ctrlSetFocus _ctrlEditName;
 
+// Bug fix: Title gets cuts off otherwise
 _ctrlBackgroundTitle ctrlSetText "";
-_ctrlBackgroundTitle ctrlSetText LLSTRING(createImportPreset);
+_ctrlBackgroundTitle ctrlSetText LLSTRING(createImportProfileTitle);

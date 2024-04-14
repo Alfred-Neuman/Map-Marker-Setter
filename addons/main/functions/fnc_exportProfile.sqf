@@ -4,7 +4,7 @@
  * Export a profile to the clipboard.
  *
  * Arguments:
- * 0: Index <NUMBER>
+ * 0: Profile index <NUMBER>
  *
  * Return Value:
  * None
@@ -38,4 +38,4 @@ if (_settings isEqualTo []) exitWith {
 "ace_clipboard" callExtension (str _settings + ";");
 "ace_clipboard" callExtension "--COMPLETE--";
 
-[format [LSTRING(profileCopiedClipboard), _profile], ICON_LOAD, GVAR(loadColorIcon), TFAR_currentUnit, 3] call ace_common_fnc_displayTextPicture;
+[format [LSTRING(profileCopiedClipboard), _profile], ICON_LOAD, GVAR(loadColorIcon), call CBA_fnc_currentUnit, 3] call ace_common_fnc_displayTextPicture;

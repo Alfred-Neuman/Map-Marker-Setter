@@ -5,13 +5,13 @@
  * See https://community.bistudio.com/wiki/ctrlCreate, example 5 as main source.
  *
  * Arguments:
- * None
+ * 0: Type of selection <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * 1 call map_marker_setter_main_fnc_gui_selectProfile;
+ * 1 call map_marker_setter_main_fnc_gui_selectProfile
  *
  * Public: No
  */
@@ -24,7 +24,7 @@ private _yOff = safezoneY + (safezoneH - (_calc / 1.2)) / 2;
 private _wOff = _calc / 40;
 private _hOff = _calc / 30; // (_calc / 1.2) / 25
 
-private _displayParent = findDisplay IDD_MISSION;
+private _displayParent = findDisplay IDD_MAIN_MAP;
 
 // Display creation
 private _display = _displayParent createDisplay "RscDisplayEmpty";
@@ -37,7 +37,7 @@ _ctrlGroup ctrlCommit 0;
 
 // Title background
 private _ctrlBackgroundTitle = _display ctrlCreate ["RscTextMulti", -1, _ctrlGroup];
-_ctrlBackgroundTitle ctrlSetText localize ([LSTRING(deleteRadioPreset), LSTRING(exportRadioPreset)] select (_this == EXPORT_PROFILE));
+_ctrlBackgroundTitle ctrlSetText localize ([LSTRING(deleteProfileTitle), LSTRING(exportProfileTitle)] select (_this == EXPORT_PROFILE));
 _ctrlBackgroundTitle ctrlSetPosition [0, 0, POS_W(16.7), POS_H(1)];
 _ctrlBackgroundTitle ctrlSetBackgroundColor [GETPRVAR("GUI_BCG_RGB_R",0.13), GETPRVAR("GUI_BCG_RGB_G",0.54), GETPRVAR("GUI_BCG_RGB_B",0.21), GETPRVAR("GUI_BCG_RGB_A",0.8)];
 _ctrlBackgroundTitle ctrlEnable false;
@@ -59,8 +59,8 @@ _ctrlList ctrlCommit 0;
 private _ctrlBackgroundList = _display ctrlCreate ["RscTextMulti", -1, _ctrlGroup];
 _ctrlBackgroundList ctrlSetPosition [POS_X(4), POS_Y(1.5), POS_W(4.9), POS_H(1.2)];
 _ctrlBackgroundList ctrlSetBackgroundColor [0, 0, 0, 0.6];
-_ctrlBackgroundList ctrlSetText LLSTRING(presetName);
-_ctrlBackgroundList ctrlSetTooltip localize ([LSTRING(deleteRadioPresetDesc), LSTRING(exportRadioPresetDesc)] select (_this == EXPORT_PROFILE));
+_ctrlBackgroundList ctrlSetText LLSTRING(profileName);
+_ctrlBackgroundList ctrlSetTooltip localize ([LSTRING(deleteProfileDesc), LSTRING(exportProfileDesc)] select (_this == EXPORT_PROFILE));
 _ctrlBackgroundList ctrlEnable false;
 _ctrlBackgroundList ctrlCommit 0;
 
@@ -95,6 +95,8 @@ _ctrlButtonCancel ctrlAddEventHandler ["ButtonClick", {
 }];
 
 // Add display EH for Enter and Escape buttons
+/*
+// Currently doesn't work on the map screen
 _display displayAddEventHandler ["KeyDown", {
     params ["_display", "_keyCode"];
 
@@ -110,5 +112,6 @@ _display displayAddEventHandler ["KeyDown", {
 
     true
 }];
+*/
 
 ctrlSetFocus _ctrlList;

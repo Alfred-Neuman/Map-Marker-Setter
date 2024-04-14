@@ -38,15 +38,9 @@ _profileNames apply {[
             };
         },
         { // Condition
-            /*
             private _args = _this select 2;
-            GETPRVAR(FORMAT_1(QGVAR(profile%1),_args select 2),[]) params ["_dataSR", "_dataLR", "_dataVLR"];
-            (_args select 1) params ["_doSR", "_doLR", "_doVLR"];
 
-            // Do not show load options from profiles where radios in question are not defined
-            (!_doSR || {_dataSR isNotEqualTo []}) && {!_doLR || {_dataLR isNotEqualTo []}} && {!_doVLR || {_dataVLR isNotEqualTo []}}
-            */
-            GVAR(enable)
+            GVAR(enable) && {(GETPRVAR(FORMAT_1(QGVAR(profile%1),_args select 1),[]) param [0, []]) isNotEqualTo []}
         },
         nil, // Children actions
         [_unit, _x] // Action parameters

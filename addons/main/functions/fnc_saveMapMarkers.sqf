@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player, [true, false, false], "Test"] call map_marker_setter_main_fnc_saveRadioSettings;
+ * [player, "Test"] call map_marker_setter_main_fnc_saveMapMarkers
  *
  * Public: No
  */

@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player, [true, false, false], "Test"] call map_marker_setter_main_fnc_saveRadioSettings
+ * [player, "Test"] call map_marker_setter_main_fnc_loadMapMarkers
  *
  * Public: No
  */
@@ -43,7 +43,7 @@ private _marker = "";
         "_markerType"
     ];
 
-    // index + hashValue act as a unique ID
+    // Index + hashValue act as a unique ID
     _marker = createMarkerLocal [format ["_USER_DEFINED #%1/%2/%3-4", _playerID, GVAR(index), _currentChannel, _hashValue], _markerPos, _currentChannel, _unit];
 
     GVAR(index) = GVAR(index) + 1;
@@ -65,8 +65,3 @@ private _marker = "";
     _marker setMarkerSizeLocal _markerSize;
     _marker setMarkerText _markerText; // broadcast marker globally
 } forEach (_data select 0);
-
-/*
-"1047260976"
-"1047260976"
-*/

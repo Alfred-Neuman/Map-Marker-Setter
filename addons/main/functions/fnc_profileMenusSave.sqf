@@ -22,6 +22,16 @@ if (_profileNames isEqualTo []) exitWith {[]};
 
 params ["_unit"];
 
+private _playerID = getPlayerID _unit; // is persistent through mission restarts
+
+// Check if valid ID
+if (_playerID == "-1") exitWith {};
+
+private _prefix = format ["_USER_DEFINED #%1", _playerID];
+
+// Check if there are any map markers that belong to the player
+if (allMapMarkers findIf {_x find _prefix == 0} == -1) exitWith {[]};
+
 // Make menus
 _profileNames apply {[
     [

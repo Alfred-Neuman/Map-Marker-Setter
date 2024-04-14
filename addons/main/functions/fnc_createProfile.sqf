@@ -4,7 +4,7 @@
  * Creates a new profile.
  *
  * Arguments:
- * 0: Preset <STRING>
+ * 0: Profile name <STRING>
  * 1: Settings <ARRAY> <STRING> (default: [[], [], [], false])
  * 2: Display <DISPLAY>
  *
@@ -17,19 +17,19 @@
  * Public: No
  */
 
-params ["_preset", ["_data", [[], [], [], false], ["", []], PROFILE_COUNT], "_display"];
+params ["_profile", ["_data", [[], worldName], ["", []]], "_display"];
 
 // Remove whitespaces
-_preset = _preset splitString WHITESPACE joinString "";
+_profile = _profile splitString WHITESPACE joinString "";
 
 // If the new preset is invalid, exit
-if (_preset == "" || {(toLower _preset) in ["names", "none"]}) exitWith {
+if (_profile == "" || {(toLower _profile) in ["names", "none"]}) exitWith {
     [LLSTRING(invalidName), false, 10, 2] call ace_common_fnc_displayText;
 };
 
 // If empty string passed, use default
 if (_data == "") then {
-    _data = [[], [], [], false];
+    _data = [[], worldName];
 };
 
 // If settings are left to default, add default preset; Otherwise make string into array
@@ -44,30 +44,25 @@ if !(_data isEqualType []) exitWith {
 };
 
 // If wrong type given, exit
-//if !(_data params [["_dataSR", [], [[]], [0, RADIO_SETTINGS_COUNT]], ["_dataLR", [], [[]], [0, RADIO_SETTINGS_COUNT]], ["_dataVLR", [], [[]], [0, RADIO_SETTINGS_COUNT]], ["_headsetStatus", false, [true]]]) exitWith {
-    //[LLSTRING(wrongFormatSettings), false, 10, 2] call ace_common_fnc_displayText;
-//};
-
-// Set the UID on the SR (only required for SR); Done as a precaution if the imported profile comes from another player
-if (_dataSR isNotEqualTo []) then {
-    //_dataSR set [7, getPlayerUID player];
+if !(_data params [["_markers", [], [[]]], ["_worldName", "", [""]]]) exitWith {
+    [LLSTRING(wrongFormatSettings), false, 10, 2] call ace_common_fnc_displayText;
 };
 
-private _presets = GETPRVAR(QGVAR(profileNames),[]);
+private _profiles = GETPRVAR(QGVAR(profileNames),[]);
 
 // If preset isn't in preset list, add it and exit
-if ((_presets findIf {_x == _preset}) == -1) exitWith {
-    _presets pushBack _preset;
+if ((_profiles findIf {_x == _profile}) == -1) exitWith {
+    _profiles pushBack _profile;
 
-    SETPRVAR(FORMAT_1(QGVAR(profile%1),_preset),_data);
+    SETPRVAR(FORMAT_1(QGVAR(profile%1),_profile),_data);
 };
 
 // Needs to be scheduled because of BIS_fnc_guiMessage
-[_preset, _data, _display] spawn {
-    params ["_preset", "_data", "_display"];
+[_profile, _data] spawn {
+    params ["_profile", "_data"];
 
     // Wait for confirmation or setting is not enabled
-    if (!GVAR(askOverwriteConfirmation) || {[format [LLSTRING(overwriteConfirmation), _preset], localize "str_a3_a_hub_misc_mission_selection_box_title", localize "str_disp_xbox_hint_yes", localize "str_disp_xbox_hint_no", _display] call BIS_fnc_guiMessage}) then {
-        SETPRVAR(FORMAT_1(QGVAR(profile%1),_preset),_data);
+    if (!GVAR(askOverwriteConfirmation) || {[format [LLSTRING(overwriteConfirmation), _profile], localize "str_a3_a_hub_misc_mission_selection_box_title", localize "str_disp_xbox_hint_yes", localize "str_disp_xbox_hint_no", findDisplay IDD_MAIN_MAP] call BIS_fnc_guiMessage}) then {
+        SETPRVAR(FORMAT_1(QGVAR(profile%1),_profile),_data);
     };
 };

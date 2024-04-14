@@ -1,5 +1,5 @@
 #define MAINPREFIX x
-#define PREFIX map_marker
+#define PREFIX map_marker_setter
 
 #include "script_version.hpp"
 
@@ -10,4 +10,4 @@
 // MINIMAL required version for the Mod. Components can specify others..
 #define REQUIRED_VERSION 2.14
 
-#define COMPONENT_NAME QUOTE(Map Marker)
+#define COMPONENT_NAME QUOTE(Map Marker Setter)

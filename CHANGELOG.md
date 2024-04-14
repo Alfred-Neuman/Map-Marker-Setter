@@ -1,4 +1,4 @@
-# Changelog for Zeus Additions 7.2.2021
+# Changelog for Map Marker Setter 14.4.2024
 
 1.0.0.0
 - Initial release.

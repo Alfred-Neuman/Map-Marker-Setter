@@ -15,25 +15,20 @@
 #define DELETE_PROFILE 0
 #define EXPORT_PROFILE 1
 
-#define PROFILE_COUNT 4
-#define RADIO_SETTINGS_COUNT 10
+#define EXCEPTIONS exceptions[] = {"isNotInside","isNotSitting","isNotSwimming","notOnMap"}
 
-#define EXCEPTIONS exceptions[] = {"isNotInside","isNotSitting","isNotSwimming"}
-
-#define ICON_ROOT QPATHTOF(ui\interact_root.paa)
-#define ICON_SAVE QPATHTOF(ui\save.paa)
-#define ICON_LOAD QPATHTOF(ui\load.paa)
 #define ICON_ADD "\A3\ui_f\data\gui\cfg\cursors\add_gs.paa"
 #define ICON_DELETE "\A3\ui_f\data\igui\cfg\commandbar\unitcombatmode_ca.paa"
-#define ICON_PERSON "\a3\Modules_F_Bootcamp\Data\PortraitPunishment.paa"
 
 #define IDC_OK 1 // emulate "OK" button
 #define IDC_CANCEL 2 // emulate "Cancel" button
 
-#define IDD_MISSION 46
+#define IDD_MAIN_MAP 12
 #define IDD_EDIT_BOX_NAME 20123
 #define IDD_EDIT_BOX_SETTINGS 20124
 #define IDD_LIST_SELECTED 20125
+
+#define TYPE_MAP 608
 
 #define POS_W(var1) var1 * _wOff
 #define POS_H(var1) var1 * _hOff
