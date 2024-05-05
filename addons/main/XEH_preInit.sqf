@@ -9,6 +9,8 @@ if (isNil {GETPRVAR(QGVAR(profileNames),nil)}) then {
     SETPRVAR(QGVAR(profileNames),[]);
 };
 
+GVAR(mapMarkers) = [];
+
 // CBA Settings
 #include "initSettings.inc.sqf"
 

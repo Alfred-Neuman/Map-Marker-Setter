@@ -21,6 +21,13 @@ class CfgVehicles {
                     insertChildren = QUOTE(_player call FUNC(profileMenusLoad));
                 };
 
+                class GVAR(undoMapMarkers) {
+                    condition = QUOTE(GVAR(mapMarkers) isNotEqualTo []);
+                    displayName = CSTRING(undo);
+                    EXCEPTIONS;
+                    statement = QUOTE(call FUNC(undoMapMarkers));
+                };
+
                 class GVAR(deleteProfile) {
                      condition = QUOTE(GETPRVAR(QQGVAR(profileNames),[]) isNotEqualTo []);
                      displayName = CSTRING(deleteProfile);
