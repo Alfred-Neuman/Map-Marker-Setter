@@ -59,6 +59,9 @@
         <Key ID="STR_map_marker_setter_main_saveConfirmation">
             <English>Are you sure you want to save to profile '%1'?</English>
         </Key>
+        <Key ID="STR_map_marker_setter_main_undoConfirmation">
+            <English>Are you sure you want to undo last map marker load?</English>
+        </Key>
 
         <Key ID="STR_map_marker_setter_main_noSettingsSaved">
             <English>No settings were saved!</English>
@@ -98,6 +101,9 @@
         <Key ID="STR_map_marker_setter_main_all">
             <English>All</English>
         </Key>
+        <Key ID="STR_map_marker_setter_main_undo">
+            <English>Undo</English>
+        </Key>
 
         <!-- Settings -->
         <Key ID="STR_map_marker_setter_main_functionalityCategory">
@@ -125,6 +131,12 @@
         </Key>
         <Key ID="STR_map_marker_setter_main_askLoadConfirmationDesc">
             <English>Asks the player for confirmation before loading a profile.</English>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_askUndoConfirmation">
+            <English>Ask Undo Confirmation</English>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_askUndoConfirmationDesc">
+            <English>Asks the player for confirmation before undoing last map marker load.</English>
         </Key>
         <Key ID="STR_map_marker_setter_main_askDeleteConfirmation">
             <English>Ask Delete Confirmation</English>

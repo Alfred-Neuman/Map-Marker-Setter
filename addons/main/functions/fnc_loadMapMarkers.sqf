@@ -23,6 +23,7 @@ private _playerID = getPlayerID _unit; // is persistent through mission restarts
 // Check if valid ID
 if (_playerID == "-1") exitWith {};
 
+GVAR(mapMarkers) = [];
 private _data = GETPRVAR(FORMAT_1(QGVAR(profile%1),_profile),[[]]);
 private _hashValue = hashValue _unit;
 private _currentChannel = currentChannel;
@@ -64,4 +65,6 @@ private _marker = "";
     _marker setMarkerShadowLocal _markerShadow;
     _marker setMarkerSizeLocal _markerSize;
     _marker setMarkerText _markerText; // broadcast marker globally
+
+    GVAR(mapMarkers) pushBack _marker;
 } forEach (_data select 0);

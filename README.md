@@ -7,6 +7,7 @@ The mod stores data locally in `profileNamespace` which means it stores configur
 * **Enable:** If enabled, you will see the load and save options.
 * **Ask Load Confirmation:** This setting will open a confirmation box when you try to load a profile. Handy for avoiding mistakes.
 * **Ask Save Confirmation:** This setting will open a confirmation box when you try to save a profile. Handy for avoiding mistakes.
+* **Ask Undo Confirmation:** This setting will open a confirmation box when you try to undo the last map marker load. Handy for avoiding mistakes.
 * **Ask Delete Confirmation:** This setting will open a confirmation box when you try to delete a profile. Handy for avoiding mistakes.
 * **Ask Overwrite Confirmation:** This setting will open a confirmation box when you try to overwrite a profile when importing/creating profiles. Handy for avoiding mistakes.
 * **Icon Color in Messages:** This setting changes the color of the icon that is shown when you load/save/export a profile.

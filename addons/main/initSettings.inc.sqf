@@ -23,6 +23,14 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(askUndoConfirmation),
+    "CHECKBOX",
+    [LSTRING(askUndoConfirmation), LSTRING(askUndoConfirmationDesc)],
+    [COMPONENT_NAME, LSTRING(profilesCategory)],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(askDeleteConfirmation),
     "CHECKBOX",
     [LSTRING(askDeleteConfirmation), LSTRING(askDeleteConfirmationDesc)],
