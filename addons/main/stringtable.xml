@@ -113,7 +113,7 @@
         <!-- ACE interactions -->
         <Key ID="STR_map_marker_setter_main_mapMarkerSetter">
             <English>Map Marker Setter</English>
-            <French>Poseur de repères sur carte</French>
+            <French>Poser des repères sur carte</French>
         </Key>
         <Key ID="STR_map_marker_setter_main_all">
             <English>All</English>
