@@ -28,7 +28,7 @@
         </Key>
         <Key ID="STR_map_marker_setter_main_profileNameDesc">
             <English>Allows you to store multiple profiles. Whitespaces will be removed. Profile names are case insensitive. DO NOT USE PUNCTUATION MARKS.</English>
-            <French>Permet de stocker plusieurs profils. Les espaces blancs seront supprimés. Les noms de profils sont insensibles à la casse. N'UTILISENT PAS DE SIGNES DE PONCTUATION.</French>
+            <French>Permet de stocker plusieurs profils. Les espaces blancs seront supprimés. Les noms de profils sont insensibles à la casse. NE PAS UTILISER DE SIGNES DE PONCTUATION.</French>
         </Key>
         <Key ID="STR_map_marker_setter_main_profileSettings">
             <English>Profile settings:</English>
