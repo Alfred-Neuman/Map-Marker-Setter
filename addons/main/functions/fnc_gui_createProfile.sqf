@@ -18,9 +18,9 @@
 
 disableSerialization;
 
-private _calc = (safezoneW / safezoneH) min 1.2;
-private _xOff = safezoneX + (safezoneW - _calc) / 2;
-private _yOff = safezoneY + (safezoneH - (_calc / 1.2)) / 2;
+private _calc = (safeZoneW / safeZoneH) min 1.2;
+private _xOff = safeZoneX + (safeZoneW - _calc) / 2;
+private _yOff = safeZoneY + (safeZoneH - (_calc / 1.2)) / 2;
 private _wOff = _calc / 40;
 private _hOff = _calc / 30; // (_calc / 1.2) / 25
 
@@ -101,7 +101,7 @@ _ctrlButtonCancel ctrlAddEventHandler ["ButtonClick", {
     (ctrlParent (_this select 0)) closeDisplay IDC_CANCEL;
 }];
 
-// Add display EH for Enter and Escape buttons
+// Add display EH for Enter button
 _display displayAddEventHandler ["KeyDown", {
     params ["_display", "_keyCode"];
 

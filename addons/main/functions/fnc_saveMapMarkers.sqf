@@ -25,7 +25,7 @@ if (_profile == "") exitWith {
     [LLSTRING(invalidProfile), false, 10, 2] call ace_common_fnc_displayText;
 };
 
-private _playerID = getPlayerID _unit; // is persistent through mission restarts
+private _playerID = getPlayerID _unit; // Is persistent through mission restarts
 
 // Check if valid ID
 if (_playerID == "-1") exitWith {};

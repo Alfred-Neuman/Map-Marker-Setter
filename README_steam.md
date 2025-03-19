@@ -22,7 +22,7 @@ The mod stores data locally in profileNamespace which means it stores configurat
     
 [h2]Links[/h2]
 [list]
-[*] [url=]Steam Workshop[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3222246129]Steam Workshop[/url]
 [*] [url=https://github.com/johnb432/Map-Marker-Setter]GitHub[/url]
 [/list]
 
@@ -30,6 +30,7 @@ The mod stores data locally in profileNamespace which means it stores configurat
 [list]
 [*] Idea by Melo
 [*] Mod by johnb43
+[*] See AUTHORS.txt
 [/list]
 
 [h2]License[/h2]
