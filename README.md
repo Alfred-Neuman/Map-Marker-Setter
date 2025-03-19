@@ -20,13 +20,12 @@ The mod stores data locally in `profileNamespace` which means it stores configur
     
 <h2>Links</h2>
 
-* [Steam Workshop]()
+* [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3222246129)
 * [GitHub](https://github.com/johnb432/Map-Marker-Setter)
 
 <h2>Credit</h2>
 
-* Idea by Melo
-* Mod by johnb43
+See AUTHORS.txt
 
 <h2>License</h2>
 

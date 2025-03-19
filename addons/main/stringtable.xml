@@ -1,26 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="map_marker_setter">
     <Package name="main">
-        <!-- Functions -->
+        <Key ID="STR_map_marker_setter_main_askDeleteConfirmation">
+            <English>Ask Delete Confirmation</English>
+            <French>Demande de confirmation de suppression</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_askDeleteConfirmationDesc">
+            <English>Asks the player for confirmation before deleting a profile.</English>
+            <French>Demande au joueur de confirmer la suppression d'un profil.</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_askLoadConfirmation">
+            <English>Ask Load Confirmation</English>
+            <French>Demande de confirmation de chargement</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_askLoadConfirmationDesc">
+            <English>Asks the player for confirmation before loading a profile.</English>
+            <French>Demande au joueur une confirmation avant de charger un profil.</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_askOverwriteConfirmation">
+            <English>Ask Overwrite Confirmation</English>
+            <French>Demande de confirmation d'écrasement</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_askOverwriteConfirmationDesc">
+            <English>Asks the player for confirmation before overwriting a profile when importing/making a new profile.</English>
+            <French>Demande au joueur une confirmation avant d'écraser un profil lors de l'importation/la création d'un nouveau profil.</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_askSaveConfirmation">
+            <English>Ask Save Confirmation</English>
+            <French>Demander de confirmation de sauvegarder</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_askSaveConfirmationDesc">
+            <English>Asks the player for confirmation before saving a profile.</English>
+            <French>Demande au joueur une confirmation avant d'enregistrer un profil.</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_askUndoConfirmation">
+            <English>Ask Undo Confirmation</English>
+            <French>Demande de confirmation d'annulation</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_askUndoConfirmationDesc">
+            <English>Asks the player for confirmation before undoing last map marker load.</English>
+            <French>Demande au joueur une confirmation avant d'annuler le chargement du dernier marqueur de carte.</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_clipboardDisabled">
+            <English>No clipboard is available!</English>
+            <French>Aucun presse-papiers est disponible !</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_createImportProfile">
+            <English>Create/Import Profile</English>
+            <French>Créer/Importer un profil</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_createImportProfileTitle">
+            <English>CREATE/IMPORT PROFILE</English>
+            <French>CRÉER/IMPORTER UN PROFIL</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_deleteConfirmation">
+            <English>Are you sure you want to delete profile '%1'?</English>
+            <French>Êtes-vous sûr de vouloir supprimer le profil '%1'?</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_deleteProfile">
+            <English>Delete Profile</English>
+            <French>Supprimer le profil</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_deleteProfileDesc">
+            <English>Allows you to select a profile to delete.</English>
+            <French>Permet de sélectionner un profil à supprimer.</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_deleteProfileTitle">
+            <English>DELETE PROFILE</English>
+            <French>SUPPRIMER LE PROFIL</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_enable">
+            <English>Enable</English>
+            <French>Autoriser</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_enableDesc">
+            <English>Enables both saving and loading actions.</English>
+            <French>Autorise les actions d'enregistrement et de chargement.</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_exportProfile">
+            <English>Export Profile</English>
+            <French>Exporter le profil</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_exportProfileDesc">
+            <English>Allows you to select a profile to export to the clipboard.</English>
+            <French>Permet de sélectionner un profil à exporter vers le presse-papiers.</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_exportProfileTitle">
+            <English>EXPORT PROFILE</English>
+            <French>EXPORTER LE PROFIL</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_functionalityCategory">
+            <English>Functionality</English>
+            <French>Fonctionnalité</French>
+        </Key>
         <Key ID="STR_map_marker_setter_main_invalidName">
             <English>The chosen name is invalid!</English>
             <French>Le nom choisi n'est pas valide !</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_invalidProfile">
+            <English>No profile was chosen!</English>
+            <French>Aucun profil n'a été choisi !</French>
         </Key>
         <Key ID="STR_map_marker_setter_main_invalidSettings">
             <English>The given settings are invalid!</English>
             <French>Les paramètres donnés ne sont pas valides !</French>
         </Key>
-        <Key ID="STR_map_marker_setter_main_wrongFormatSettings">
-            <English>The given settings are in the wrong format!</English>
-            <French>Les paramètres donnés ne sont pas dans le bon format !</French>
+        <Key ID="STR_map_marker_setter_main_loadColorIcon">
+            <English>Icon Color in Messages</English>
+            <French>Couleur de l'icône dans les messages</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_loadColorIconDesc">
+            <English>Sets the icons in the messages to this color.</English>
+            <French>Définit les icônes des messages dans cette couleur.</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_loadConfirmation">
+            <English>Are you sure you want to load from profile '%1'?</English>
+            <French>Êtes-vous sûr de vouloir charger le profil '%1'?</French>
+        </Key>
+        <Key ID="STR_map_marker_setter_main_mapMarkerSetter">
+            <English>Map Marker Setter</English>
+            <French>Poser des repères sur carte</French>
         </Key>
         <Key ID="STR_map_marker_setter_main_overwriteConfirmation">
             <English>Are you sure you want to overwrite profile '%1'?</English>
             <French>Êtes-vous sûr de vouloir écraser le profil '%1'?</French>
         </Key>
-        <Key ID="STR_map_marker_setter_main_createImportProfileTitle">
-            <English>CREATE/IMPORT PROFILE</English>
-            <French>CRÉER/IMPORTER UN PROFIL</French>
+        <Key ID="STR_map_marker_setter_main_profileCopiedClipboard">
+            <English>Profile '%1' has been copied to your clipboard.</English>
+            <French>Le profil '%1' a été copié dans votre presse-papiers.</French>
         </Key>
         <Key ID="STR_map_marker_setter_main_profileName">
             <English>Profile name:</English>
@@ -38,155 +145,25 @@
             <English>Paste profile here, if you are importing. Leave blank if you are creating a new profile.</English>
             <French>Collez le profil ici, si vous l'importez. Laissez en blanc si vous créez un nouveau profil.</French>
         </Key>
-        <Key ID="STR_map_marker_setter_main_deleteConfirmation">
-            <English>Are you sure you want to delete profile '%1'?</English>
-            <French>Êtes-vous sûr de vouloir supprimer le profil '%1'?</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_invalidProfile">
-            <English>No profile was chosen!</English>
-            <French>Aucun profil n'a été choisi !</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_aceClipboardDisabled">
-            <English>ACE clipboard is disabled!</English>
-            <French>Le presse-papiers ACE est désactivé !</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_profileCopiedClipboard">
-            <English>Profile '%1' has been copied to your clipboard.</English>
-            <French>Le profil '%1' a été copié dans votre presse-papiers.</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_noSettingsLoaded">
-            <English>No settings were loaded!</English>
-            <French>Aucun paramètre n'a été chargé !</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_settingsLoadedFromProfile">
-            <English>Loaded %1 settings from profile '%2'.</English>
-            <French>Chargement des paramètres %1 du profil '%2'.</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_loadConfirmation">
-            <English>Are you sure you want to load from profile '%1'?</English>
-            <French>Êtes-vous sûr de vouloir charger le profil '%1'?</French>
+        <Key ID="STR_map_marker_setter_main_profilesCategory">
+            <English>Profiles</English>
+            <French>Profils</French>
         </Key>
         <Key ID="STR_map_marker_setter_main_saveConfirmation">
             <English>Are you sure you want to save to profile '%1'?</English>
             <French>Êtes-vous sûr de vouloir enregistrer dans le profil '%1'?</French>
         </Key>
-        <Key ID="STR_map_marker_setter_main_undoConfirmation">
-            <English>Are you sure you want to undo last map marker load?</English>
-            <French>Êtes-vous sûr de vouloir annuler le chargement du dernier marqueur de carte ?</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_noSettingsSaved">
-            <English>No settings were saved!</English>
-            <French>Aucun réglage n'a été sauvegardé !</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_settingsSavedToProfile">
-            <English>Saved %1 settings to profile '%2'.</English>
-            <French>Enregistrement des paramètres de %1 dans le profil '%2'.</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_deleteProfileTitle">
-            <English>DELETE PROFILE</English>
-            <French>SUPPRIMER LE PROFIL</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_exportProfileTitle">
-            <English>EXPORT PROFILE</English>
-            <French>EXPORTER LE PROFIL</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_deleteProfileDesc">
-            <English>Allows you to select a profile to delete.</English>
-            <French>Permet de sélectionner un profil à supprimer.</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_exportProfileDesc">
-            <English>Allows you to select a profile to export to the clipboard.</English>
-            <French>Permet de sélectionner un profil à exporter vers le presse-papiers.</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_deleteProfile">
-            <English>Delete Profile</English>
-            <French>Supprimer le profil</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_createImportProfile">
-            <English>Create/Import Profile</English>
-            <French>Créer/Importer un profil</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_exportProfile">
-            <English>Export Profile</English>
-            <French>Exporter le profil</French>
-        </Key>
-        <!-- ACE interactions -->
-        <Key ID="STR_map_marker_setter_main_mapMarkerSetter">
-            <English>Map Marker Setter</English>
-            <French>Poser des repères sur carte</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_all">
-            <English>All</English>
-            <French>Tous</French>
-        </Key>
         <Key ID="STR_map_marker_setter_main_undo">
             <English>Undo</English>
             <French>Annuler</French>
         </Key>
-        <!-- Settings -->
-        <Key ID="STR_map_marker_setter_main_functionalityCategory">
-            <English>Functionality</English>
-            <French>Fonctionnalité</French>
+        <Key ID="STR_map_marker_setter_main_undoConfirmation">
+            <English>Are you sure you want to undo last map marker load?</English>
+            <French>Êtes-vous sûr de vouloir annuler le chargement du dernier marqueur de carte ?</French>
         </Key>
-        <Key ID="STR_map_marker_setter_main_profilesCategory">
-            <English>Profiles</English>
-            <French>Profils</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_enable">
-            <English>Enable</English>
-            <French>Autoriser</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_enableDesc">
-            <English>Enables both saving and loading actions.</English>
-            <French>Autorise les actions d'enregistrement et de chargement.</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_askSaveConfirmation">
-            <English>Ask Save Confirmation</English>
-            <French>Demander de confirmation de sauvegarder</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_askSaveConfirmationDesc">
-            <English>Asks the player for confirmation before saving a profile.</English>
-            <French>Demande au joueur une confirmation avant d'enregistrer un profil.</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_askLoadConfirmation">
-            <English>Ask Load Confirmation</English>
-            <French>Demande de confirmation de chargement</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_askLoadConfirmationDesc">
-            <English>Asks the player for confirmation before loading a profile.</English>
-            <French>Demande au joueur une confirmation avant de charger un profil.</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_askUndoConfirmation">
-            <English>Ask Undo Confirmation</English>
-            <French>Demande de confirmation d'annulation</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_askUndoConfirmationDesc">
-            <English>Asks the player for confirmation before undoing last map marker load.</English>
-            <French>Demande au joueur une confirmation avant d'annuler le chargement du dernier marqueur de carte.</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_askDeleteConfirmation">
-            <English>Ask Delete Confirmation</English>
-            <French>Demande de confirmation de suppression</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_askDeleteConfirmationDesc">
-            <English>Asks the player for confirmation before deleting a profile.</English>
-            <French>Demande au joueur de confirmer la suppression d'un profil.</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_askOverwriteConfirmation">
-            <English>Ask Overwrite Confirmation</English>
-            <French>Demande de confirmation d'écrasement</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_askOverwriteConfirmationDesc">
-            <English>Asks the player for confirmation before overwriting a profile when importing/making a new profile.</English>
-            <French>Demande au joueur une confirmation avant d'écraser un profil lors de l'importation/la création d'un nouveau profil.</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_loadColorIcon">
-            <English>Icon Color in Messages</English>
-            <French>Couleur de l'icône dans les messages</French>
-        </Key>
-        <Key ID="STR_map_marker_setter_main_loadColorIconDesc">
-            <English>Sets the icons in the messages to this color.</English>
-            <French>Définit les icônes des messages dans cette couleur.</French>
+        <Key ID="STR_map_marker_setter_main_wrongFormatSettings">
+            <English>The given settings are in the wrong format!</English>
+            <French>Les paramètres donnés ne sont pas dans le bon format !</French>
         </Key>
     </Package>
 </Project>

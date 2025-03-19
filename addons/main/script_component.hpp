@@ -15,3 +15,6 @@
 #endif
 
 #include "script_macros.hpp"
+
+// Include BI DIK codes
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"

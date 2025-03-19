@@ -18,7 +18,7 @@
 
 params ["_unit", "_profile"];
 
-private _playerID = getPlayerID _unit; // is persistent through mission restarts
+private _playerID = getPlayerID _unit; // Is persistent through mission restarts
 
 // Check if valid ID
 if (_playerID == "-1") exitWith {};
@@ -45,7 +45,7 @@ private _marker = "";
     ];
 
     // Index + hashValue act as a unique ID
-    _marker = createMarkerLocal [format ["_USER_DEFINED #%1/%2/%3-4", _playerID, GVAR(index), _currentChannel, _hashValue], _markerPos, _currentChannel, _unit];
+    _marker = createMarkerLocal [format ["_USER_DEFINED #%1/%2/%3-%4", _playerID, GVAR(index), _currentChannel, _hashValue], _markerPos, _currentChannel, _unit];
 
     GVAR(index) = GVAR(index) + 1;
 
@@ -64,7 +64,7 @@ private _marker = "";
 
     _marker setMarkerShadowLocal _markerShadow;
     _marker setMarkerSizeLocal _markerSize;
-    _marker setMarkerText _markerText; // broadcast marker globally
+    _marker setMarkerText _markerText; // Broadcast marker globally
 
     GVAR(mapMarkers) pushBack _marker;
 } forEach (_data select 0);
